@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import type { Schema } from "../amplify/data/resource";
-import { generateClient } from "aws-amplify/data";
+//import type { Schema } from "../amplify/data/resource";
+//import { generateClient } from "aws-amplify/data";
 import { FileUploader } from '@aws-amplify/ui-react-storage';
-import { ThemeProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import React from 'react';
 
 
-const client = generateClient<Schema>();
+//const client = generateClient<Schema>();
 
 function App() {
   const { user, signOut } = useAuthenticator();
