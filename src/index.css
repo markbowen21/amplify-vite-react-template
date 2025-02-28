@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background: linear-gradient(180deg, rgb(117, 81, 194), rgb(255, 255, 255));
-  display: flex;
+  background: lightgray;
+  display: block;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
   width: 100vw;
@@ -14,6 +14,63 @@ main {
   flex-direction: column;
   align-items: stretch;
 }
+
+h1,h3 {
+  text-align: center;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1em;
+  padding: 1em;
+  border-radius: 8px;
+  position: relative; /* Required for the pseudo-element positioning */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.test-script-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em; /* Adjust the gap as needed */
+}
+
+.file-upload {
+  align-items: center;
+  align-self: center;
+}
+
+.select-spacing {
+  margin-top: 0.5em; /* Adjust the top margin as needed */
+  margin-left: 1em; /* Increase the left margin as needed */
+  width: 200px; /* Adjust the width as needed */
+}
+
+.run-button{
+  margin: 1em;
+  align-items: center;
+  align-self: center;
+  background-color: #0e8d0a;
+}
+
+.status-bar,
+.run-test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 8px;
+}
+
 
 button {
   border-radius: 8px;

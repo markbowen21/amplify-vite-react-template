@@ -14,6 +14,7 @@ Amplify.configure(outputs);
 ReactDOM.createRoot(document.getElementById("root")!).render(
     
   <React.StrictMode>
+    <h1>Rivieh Test Framework</h1>
     <Authenticator>
       <App />
     </Authenticator>
