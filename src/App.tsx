@@ -12,6 +12,17 @@ function App() {
   const { user, signOut } = useAuthenticator();
   const [status, setStatus] = useState("Idle");
 
+  const handleSuccess = (result:any) => {
+      console.log('File successfully uploaded:', result);
+      alert(`File uploaded successfully: ${result.key}`);
+  };
+
+  const handleError = (error: any) => {
+      console.error('Error uploading file:', error);
+      alert('Failed to upload file. Please try again.');
+  };
+    
+   
   return (
     <main>
       <div className="button-container">
@@ -53,10 +64,12 @@ function App() {
             <h3> Test Script :</h3>
             <div className="file-upload">
               <FileUploader
-                acceptedFileTypes={['image/*']}
-                path="public/"
-                maxFileCount={1}
+                acceptedFileTypes={['.csv']}
+                path="public/" // Specify the folder path within the bucket
+                maxFileCount={1} // Allow only one file upload at a time
                 isResumable
+                onUploadSuccess={handleSuccess} // Callback for success
+                onUploadError={handleError} // Callback for error
               />
             </div>
           </div>
